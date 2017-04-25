@@ -34,6 +34,7 @@ build:
 deploy:
   steps:
     - internal/docker-push:
+        image: php-123
         username: coolgourav147
         password: pa55w0rd
         tag: my-amazing-tag
