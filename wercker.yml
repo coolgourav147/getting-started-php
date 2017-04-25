@@ -30,3 +30,12 @@ build:
     - script:
         name: Serve application
         code: php -S localhost:8000 >> /dev/null &
+        name: docker-hub-push
+deploy:
+  steps:
+    - internal/docker-push:
+        username: coolgourav147
+        password: pa55w0rd
+        tag: my-amazing-tag
+        repository: coolgourav147/cliqr
+        registry: https://registry.hub.docker.com
